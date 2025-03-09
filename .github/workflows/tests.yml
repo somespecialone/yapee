@@ -1,0 +1,34 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ v* ]
+
+concurrency:
+  group: tests
+  cancel-in-progress: true
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: poetry
+      - run: poetry install --with test
+
+      - name: Run PyTest with coverage
+        run: poetry run pytest --cov --cov-report=xml
+
+      - name: Upload coverage report to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          use_oidc: true

@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "yapee"
+version = "1.0.0"
+description = "Yet Another Python Event Emitter"
+license = "MIT"
+authors = ["Dmytro Tkachenko <itsme@somespecial.one>"]
+readme = "README.md"
+homepage = "https://github.com/somespecialone/yapee"
+repository = "https://github.com/somespecialone/yapee"
+keywords = []
+classifiers = [
+    "Framework :: AsyncIO",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Typing :: Typed",
+]
+
+include = ["LICENSE"]
+packages = [{ include = "yapee.py", from = "src", to = "." }]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/somespecialone/yapee/issues"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+
+[tool.poetry.group.test]
+optional = true
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+pytest-asyncio = "^0.25.3"
+pytest-cov = "^6.0.0"
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
