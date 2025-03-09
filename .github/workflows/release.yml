@@ -12,12 +12,19 @@ jobs:
     timeout-minutes: 10
     permissions:
       contents: write
+    env:
+      TESTS_REF: ${{ github.event.workflow_run.head_branch }}
     steps:
       - uses: actions/checkout@v4
 
-      # it would be nice to be able to generate changelogs there
+        # it would be nice to be able to generate changelogs there
+
+      - name: Extract tag name from event
+        id: tag-name
+        run: echo "TESTS_TAG=${TESTS_REF##*/}" >> $GITHUB_OUTPUT
 
       - name: Create & publish release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.tag-name.outputs.TESTS_TAG }}
           generate_release_notes: true

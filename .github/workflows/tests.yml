@@ -8,10 +8,6 @@ permissions:
   id-token: write
   contents: read
 
-concurrency:
-  group: tests
-  cancel-in-progress: true
-
 jobs:
   main:
     runs-on: ubuntu-latest

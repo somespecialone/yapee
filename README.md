@@ -5,7 +5,7 @@
 [![pypi](https://img.shields.io/pypi/v/yapee)](https://pypi.org/project/yapee)
 [![Publish](https://github.com/somespecialone/yapee/actions/workflows/publish.yml/badge.svg)](https://github.com/somespecialone/yapee/actions/workflows/publish.yml)
 [![Tests](https://github.com/somespecialone/yapee/actions/workflows/tests.yml/badge.svg)](https://github.com/somespecialone/yapee/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/somespecialone/yapee/branch/main/graph/badge.svg?token=SP7EQKPIQ3)](https://codecov.io/gh/somespecialone/yapee)
+[![codecov](https://codecov.io/gh/somespecialone/yapee/branch/main/graph/badge.svg?token=B0LARHH9MS)](https://codecov.io/gh/somespecialone/yapee)
 
 _ASAP_ (as _simple_ as possible), _fast_, and _understandable_ brokerless, zero-dependent event emitter for
 Python.
