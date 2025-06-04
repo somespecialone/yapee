@@ -2,6 +2,7 @@
 
 [![Made in Ukraine](https://img.shields.io/badge/made_in-ukraine-ffd700.svg?labelColor=0057b7)](https://stand-with-ukraine.pp.ua)
 [![license](https://img.shields.io/github/license/somespecialone/yapee)](https://github.com/somespecialone/yapee/blob/main/LICENSE)
+[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
 [![pypi](https://img.shields.io/pypi/v/yapee)](https://pypi.org/project/yapee)
 [![Publish](https://github.com/somespecialone/yapee/actions/workflows/publish.yml/badge.svg)](https://github.com/somespecialone/yapee/actions/workflows/publish.yml)
 [![Tests](https://github.com/somespecialone/yapee/actions/workflows/tests.yml/badge.svg)](https://github.com/somespecialone/yapee/actions/workflows/tests.yml)
@@ -28,6 +29,10 @@ poetry add yapee
 
 ```sh
 pip install yapee
+```
+
+```sh
+uv add yapee
 ```
 
 ## Usage
